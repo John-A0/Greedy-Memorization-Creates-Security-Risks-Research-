@@ -45,25 +45,6 @@ Feature categories include linker versions, OS versions, entry point, image base
 
 ---
 
-## ⚙️ Experimental Setup
-
-Libraries used:  
-- scikit-learn  
-- xgboost  
-- lightgbm  
-- pefile  
-
-Evaluation metrics:  
-- Accuracy  
-- Precision  
-- Recall  
-- False Positives (FP)  
-- False Negatives (FN)  
-
-Feature importance was analyzed for all trained models.
-
----
-
 ## ✅ Results Summary
 
 All models achieved very high benchmark performance (>99.6% accuracy):
@@ -113,45 +94,6 @@ Metadata-based ensemble models provide fast and highly accurate malware detectio
 
 Recommended deployment:  
 Use metadata-based models strictly as a high-speed pre-filtering layer, combined with deeper content inspection methods such as byte-level n-gram analysis, Import Address Table hashing, and dynamic sandboxing.
-
----
-
-## ▶️ How to Run
-
-Install dependencies:
-
-pip install pefile scikit-learn xgboost lightgbm matplotlib pandas numpy
-
-Extract dataset:
-
-unzip Dataset.zip
-
-Train models:
-
-python Code/train_models.py
-
-Evaluate models:
-
-python Code/evaluate_models.py
-
-Run mimicry attack test:
-
-python Code/mimicry_attack.py
-
----
-
-## 📁 Repository Structure
-
-Greedy-Memorization-Research/  
-├── Code/  
-│   ├── feature_extraction.py  
-│   ├── train_models.py  
-│   ├── evaluate_models.py  
-│   └── mimicry_attack.py  
-├── pkl_files/  
-│   └── saved_models.pkl  
-├── Dataset.zip  
-└── README.md  
 
 ---
 
